@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jsy.java.authman.mapper.RegisterUserMapper">
+    <!-- 查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.jsy.java.authman.model.RegisterUser">
+        <id     property="register_id" 		    column="registerId" />
+        <result property="register_username" 	column="registerUserName" />
+        <result property="register_email" 	column="registerEmail" />
+        <result property="register_phone" 	column="registerPhone" />
+    </resultMap>
+    <select id="selectRegisterUserList" resultMap="BaseResultMap">
+        select register_id,register_username,register_email,register_phone from register_user
+    </select>
+</mapper>
